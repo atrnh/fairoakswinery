@@ -10,7 +10,7 @@ const sass = require('gulp-sass');
 const config = {
   port: 5000,
   devBaseUrl: 'http://localhost',
-  index: 'dist/index.html',
+  index: 'index.html',
   paths: {
     html: './*.html',
     dist: './dist',
