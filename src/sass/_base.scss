@@ -14,11 +14,10 @@ body {
 
 p {
   @include font-size-line-height(18px, 26px, $font-base-size)
-}
-
-p.intro-text {
-  font-weight: 600;
-  @include font-size-line-height(20px, 34px, 18px);
+  &.intro-text {
+    font-weight: 600;
+    @include font-size-line-height(20px, 34px, 18px);
+  }
 }
 
 em {
@@ -48,4 +47,9 @@ h3 {
 
 h4 {
   font-size: $font-20;
+}
+
+a {
+  color: $primary-green;
+  &:hover { color: $hover-green; }
 }
