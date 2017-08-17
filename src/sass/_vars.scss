@@ -1,0 +1,23 @@
+$font-sans: 'Nunito', Helvetica, sans-serif;
+$font-serif: 'Cormorant Garamond', Times, serif;
+$font-base-size: 20px;
+
+@function calculate-em($target-px, $base-px) {
+  @return ($target-px / $base-px) * 1em
+}
+
+@mixin font-size-line-height($target-size, $target-height, $base-px) {
+  font-size: calculate-em($target-size, $base-px);
+  line-height: calculate-em($target-height, $target-size);
+}
+
+$font-18: calculate-em(18px, $font-base-size);
+$font-20: calculate-em(20px, $font-base-size);
+$font-24: calculate-em(24px, $font-base-size);
+$font-30: calculate-em(30px, $font-base-size);
+$font-36: calculate-em(36px, $font-base-size);
+
+$bg-color: #F2EE9B;
+$fg-color: #4A4A4A;
+$primary-green: #297E1A;
+$hover-green: #B8D050;
