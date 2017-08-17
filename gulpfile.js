@@ -12,11 +12,12 @@ const config = {
   devBaseUrl: 'http://localhost',
   index: 'dist/index.html',
   paths: {
-    html: './src/*.html',
+    html: './*.html',
     dist: './dist',
     js: './src/**/*.js',
     mainJs: './src/main.js',
     sass: './src/**/*.scss',
+    mainSass: './src/main.scss'
   },
 };
 
@@ -48,6 +49,12 @@ gulp.task('sass', () => {
   return gulp.src(config.paths.mainSass)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(`${config.paths.dist}/css`))
+    .pipe(connect.reload());
+});
+
+gulp.task('html', () => {
+  return gulp.src(config.paths.html)
+    .pipe(gulp.dest(config.paths.dist))
     .pipe(connect.reload());
 });
 
