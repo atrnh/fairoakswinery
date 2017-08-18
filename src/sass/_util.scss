@@ -24,6 +24,7 @@ $hover-green: #B8D050;
 }
 
 /* Various font sizes in em */
+$font-14: calculate-em(14px, $font-base-size);
 $font-18: calculate-em(18px, $font-base-size);
 $font-20: calculate-em(20px, $font-base-size);
 $font-24: calculate-em(24px, $font-base-size);
