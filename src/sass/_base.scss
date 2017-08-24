@@ -9,6 +9,7 @@ body, html {
 
 body {
   color: $fg-color;
+  overflow-x: hidden;
   font: {
     family: $font-serif;
     size: 20px;
@@ -69,8 +70,14 @@ h4 {
 }
 
 a {
-  color: $primary-green;
-  &:hover { color: $hover-green; }
+  color: $red;
+  text-decoration: none;
+  @include vend-prefix("transition", "color 0.5s ease-out");
+
+  &:hover {
+    color: $hover-red;
+    text-decoration: underline;
+  }
 }
 
 blockquote {
@@ -84,4 +91,9 @@ blockquote {
   p {
     font-size: $font-24;
   }
+}
+
+img {
+  width: 100%;
+  padding: 1em 0;
 }

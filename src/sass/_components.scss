@@ -41,6 +41,20 @@ nav {
         family: $font-sans;
         size: $font-14;
       }
+
+      a {
+        color: $fg-color;
+        border: {
+          bottom: 1px solid rgba(74, 74, 74, 0);
+        }
+        @include vend-prefix("transition", "border-bottom 0.5s ease-out");
+
+        &:hover {
+          color: $fg-color;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(74, 74, 74, 1.0);
+        }
+      }
     }
   }
 }
@@ -55,6 +69,7 @@ nav {
 .has-sidebar {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 2em;
 
   .sidebar {
     flex: 1;
@@ -69,13 +84,21 @@ nav {
           family: $font-sans;
           size: calculate-em(16px, $font-base-size);
         }
+
+        a {
+          color: $primary-green;
+
+          &:hover {
+            color: $hover-green;
+          }
+        }
       }
     }
   }
 
   section {
     flex: 3;
-    min-width: 480px;
+    min-width: 450px;
 
     article {
       margin-bottom: 2em;
@@ -83,6 +106,17 @@ nav {
   }
 }
 
-.intro {
+#vengg-prereqs {
+  font-size: calculate-em(16px, 18px);
+}
 
+.small-sans {
+  font: {
+    family: $font-sans;
+    size: calculate-em(10px, 18px);
+  }
+}
+
+#linkedin-badge {
+  width: 101px;
 }
